@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Home>
+    @* telling it to use the Home modelsbuilder model *@
+    @* above line can also be @inherits.Umbraco.Web.Mvc.UmbracoViewPage<Umbraco.Web.PublishedModels.Home> *@
+    
+    @* telling it to be aware of the models namespace in models.generated.cs *@
+    @using Umbraco.Web.PublishedModels
+@{
+	Layout = "master.cshtml";
+}
+
+@* the fun starts here *@
+
+@* title is the alias in the compositions *@
+@Model.Value("title")
